@@ -29,8 +29,8 @@ public class Sala
         if (dw < 8)
         {
         for (int i = 0; i < semanas.length; i++) {
-            this.semanas[i] = new Semana(i+1, dw);
-            System.out.println("Semana "+ i+1+"\n  \n");
+            this.semanas[i] = new Semana((i+1), dw);
+            System.out.println("Semana "+ this.semanas[i].getNumero()+"\n  \n");
             this.semanas[i].Dias();
         }            
         } else {
@@ -62,5 +62,13 @@ public class Sala
         this.tec = tec;
     }
 
+    public void listarSemana()
+    {
+        for (int i = 0; i < semanas.length; i++)
+        {
+            System.out.println("para la semana " + semanas[i].getNumero() + ":" );
+            this.semanas[i].listarDias();
+        }
+    }
     
 }

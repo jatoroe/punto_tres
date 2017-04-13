@@ -59,12 +59,19 @@ public class Semana
      w = ((hi-hf)/2);
  }
   
- public void CalcularSegmentosLibres(int d)
+ public void listarDias()
  {
-     for (int i = 0; i < DaysOFWork.length; i++) {
-         for (int j = 0; j < w; j++){
-             
-         }                 
+     for (int i = 0; i < DaysOFWork.length; i++)
+     {
+         System.out.print("En el dia " + this.DaysOFWork[i].getName() + " "
+         + this.DaysOFWork[i].getDate() + " estan disponibles las seguientes"
+                 + " funciones ");
+         this.DaysOFWork[i].listarSegmentos();
      }
  }
+
+    public int getNumero() {
+        return numero;
+    }
+ 
 }

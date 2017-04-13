@@ -13,11 +13,21 @@ public class Segmento
 {
     private String inicio;
     private String fin;
+    private String nombre;
+    private boolean bool = false;
     
     public Segmento(String i, String f)
     {
         this.inicio = i;
-        this.fin = f;
+        this.fin = f;        
+    }
+
+    public boolean isBool() {
+        return bool;
+    }
+
+    public void setBool(boolean bool) {
+        this.bool = bool;
     }
 
     public String getInicio() {
@@ -30,6 +40,14 @@ public class Segmento
 
     public void setInicio(String inicio) {
         this.inicio = inicio;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public void setFin(String fin) {

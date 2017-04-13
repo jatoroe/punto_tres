@@ -16,9 +16,20 @@ public class Punto_3 {
      */
     public static void main(String[] args) {
         Scanner tec = new Scanner(System.in);
-        int u = tec.nextInt();
-        Sala sala = new Sala(1);
-        sala.SemanasdeSala(u);
+        
+        System.out.println("Bienvenido por favor indique cuantas"
+                + " salas va a programar");
+        int op = tec.nextInt();
+        Programacion po = new Programacion(op);
+        po.doPrograming();
+        System.out.println("¿Quiere conocer la lista de funciones?\n1. Si\n2. No");
+        int list = tec.nextInt();
+        if (list == 1)
+        {
+            po.listarFnciones();
+        } else {
+            System.out.println("Hasta luego.");
+        }
         
       
         
